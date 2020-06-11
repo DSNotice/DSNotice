@@ -64,6 +64,46 @@ Then, create TFRecords
 $ python3 generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=data/test.record  --image_dir=images/test
 $ python3 generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=data/train.record  --image_dir=images/train
 ```
+Label Map shows the model which ID has which class. For this reason, a Label Map file is a text graph definition file must be created by entering the class and ID information in order to conduct the training. This .pbtxt file must be saved in data file.
+```bash
+item{
+  id: 1
+  name: 'old'
+}
+
+item{
+  id: 2
+  name: 'young'
+}
+```
+
+Change commands in ssd_mobilenet_v1_coco.config
+```bash
+num_classes: 2
+```
+```bash
+fine_tune_checkpoint: "ssd_mobilenet_v1_coco_11_06_2017/model.ckpt"
+```
+```bash
+train_input_reader: {
+tf_record_input_reader {
+input_path: "data/train.record"
+}
+label_map_path: "data/object-detection.pbtxt"
+}
+```
+```bash
+eval_input_reader: {
+tf_record_input_reader {
+input_path: "data/test.record"
+}
+label_map_path: "data/object-detection.pbtxt"
+shuffle: false
+num_readers: 1
+}
+```
+
+
 Start the training
 ```bash
 $ python3 train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v1_coco.config
