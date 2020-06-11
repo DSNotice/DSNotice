@@ -9,9 +9,16 @@ Object detection training was carried out using the TensorFlow Object Detection 
 
 # Preperation of Training
 * Download [models](https://github.com/tensorflow/models)
-* Clone this repo.
-* 
+Save followings in models/research/object_detection/legacy
+* Create a dataset positive and negative images
+* [ssd_mobilenet_v1_coco.config](http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz)
+* [xml_to_csv.py](https://github.com/datitran/raccoon_dataset/blob/master/xml_to_csv.py)
+* [generate_tfrecord.py](https://github.com/datitran/raccoon_dataset/blob/master/generate_tfrecord.py)
+* New folder named training
+* New folder named data
 
+Save following in Save followings in models/research/object_detection/legacy/training
+* [ssd_mobilenet_v1_coco.config](https://github.com/tensorflow/models/blob/master/research/object_detection/samples/configs/ssd_mobilenet_v1_coco.config)
 
 ## Model Training with SSD Mobilenet COCO
 A deep learning training from scratch takes time and big data to perform. These problems can be solved by training on pre-trained models. Due to the higher accuracy rate, the use of the Single Shot Detector (SSD) algorithm was preferred in the project. SSD is capable of detecting multiple objects in single shot.
