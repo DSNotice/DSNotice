@@ -12,3 +12,4 @@ In the project, an example of digital information transfer was created by applyi
 
 ## Instructions
 * Read [Qt GUI Interface](https://github.com/DSNotice/DSNotice/edit/master/Qt%20GUI%20Interface/README.md)
+* Read [WordPress Website](https://github.com/DSNotice/DSNotice/blob/master/WordPress%20Website%20Photos/README.md)
