@@ -1,3 +1,6 @@
+# Description
+In the study, younger than 40 years old was labeled as "young", and older than 40 years old was labeled as "old" and binary classification training was carried out with Tensorflow Object Detection API.
+
 # Deep Learning with Tensorflow
 TensorFlow library is a library by Google that focuses on deep learning and machine learning as open source as of November 9, 2015, and provides a development framework for researchers by making numerical calculations using data flow charts.
 
@@ -136,3 +139,7 @@ Tracking of educational outcomes
 ```bash
 $ tensorboard --logdir "/content/gdrive/My Drive/age_det/models/research/object_detection/legacy/training/"
 ```
+
+# Links
+Click [here](https://drive.google.com/drive/folders/1DdI4VZHquhSapG-GfEj29izST2MLIciJ?usp=sharing) to access the dataset.<br/>
+Click [here](https://drive.google.com/drive/folders/1AY3w1vdhwrl_sIPLvc-bUMj2eq5mCC9c?usp=sharing) to access the trained Age Detection model.
